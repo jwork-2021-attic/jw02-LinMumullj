@@ -1,0 +1,18 @@
+@startuml
+
+entity  队列 as line #Black
+actor   妖怪 as monsters #Blue
+actor   蛇精 as theQueensnack #Green
+control 排序器 as sorter #Red
+entity 打印器 as writer #White
+database 排序记录 as log #Purple
+
+monsters -> monsters : 创造
+line -> monsters : 装载
+theQueensnack -> sorter : 设置
+theQueensnack -> line : 获取
+theQueensnack -> log : 排序并获得记录
+writer -> log : 打印
+
+
+@enduml

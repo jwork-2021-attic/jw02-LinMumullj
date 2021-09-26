@@ -1,0 +1,17 @@
+@startuml
+
+entity  队列 as line #Black
+actor   葫芦 as ONE_to_SEVEN #Blue
+actor   老头 as theGeezer #Green
+control 排序器 as sorter #Red
+entity 打印器 as writer #White
+database 排序记录 as log #Purple
+
+line -> ONE_to_SEVEN : 装载
+theGeezer -> sorter : 设置
+theGeezer -> line : 获取
+theGeezer -> log : 排序并获得记录
+writer -> log : 打印
+
+
+@enduml

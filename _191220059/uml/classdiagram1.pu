@@ -1,0 +1,95 @@
+@startuml
+
+enum Gourd{
+    ONE(204, 0, 0),
+    TWO(255, 165, 0),
+    THREE(252, 233, 79),
+    FOUR(78, 154, 6),
+    FIVE(50, 175, 255),
+    SIX(114, 159, 207),
+    SEVEN(173, 127, 168);
+    __private final__
+    final int r
+    final int g
+    final int b
+    Position position
+    Gourd() 
+
+    __static__
+    getGourdByRank()
+    __public__
+    rank()
+    swapPosition()
+    __override__
+    toString()
+    setPosition()
+    getPosition()
+    swapPosition()
+    getValue()
+}
+class Linable{
+    setPosition()
+    getPosition()
+    getValue()
+}
+
+class Line{
+    __ private __
+    #Position[] positions
+    __ public __
+    +Line()
+    +put()
+    +get()
+    __ override __
+    -toString() 
+    -toArray()
+}
+
+class Position{
+    Linable linable
+    Position()
+    setLinable()
+}
+
+class Sorter{
+
+    load()
+    sort()
+    getPlan()
+}
+
+class BubbleSorter{
+    __private__
+    int[] a
+    String plan
+    swap()
+    __override__
+    load()
+    sort()
+    getPlan()
+}
+
+class Geezer{
+    __private static__
+    Geezer theGeezer
+    __public static__
+    Geezer getTheGeezer()
+    __private__
+    Geezer()
+    Sorter sorter
+    __public__
+    setSorter()
+    LineUp()
+    parsePlan()
+    execute()
+
+}
+
+Geezer "1"-->"1" Geezer : has
+Geezer "1"-->"1" Sorter : has
+Gourd "1"-->"1" Position :has
+Position "1"-->"1" Linable :has
+Line "1"-->"N" Position :has
+Linable <|.. Gourd : Realization
+Sorter <|.. BubbleSorter : Realization
+@enduml
