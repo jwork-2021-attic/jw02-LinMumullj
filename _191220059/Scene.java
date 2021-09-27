@@ -12,7 +12,7 @@ public class Scene {
         line.put(monsters);
         
         Queensnack theQueensnack=Queensnack.getTheQueensnack();
-        Sorter sorter = new ShellSorter();
+        Sorter sorter = new QuickSorter();
 
         theQueensnack.setSorter(sorter);
 
