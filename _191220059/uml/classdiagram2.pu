@@ -1,0 +1,100 @@
+@startuml
+
+class Monster{
+    __private__
+    int r
+    int g
+    int b
+    int myrank
+    Position position
+    __static__
+    Monster[] monsters
+    creatmonsters()
+    getMonsterByRank()
+    __public__
+    Monster()
+    setMonster()
+    setRank()
+    swapPosition()
+    __override__
+    toString()
+    setPosition()
+    getPosition()
+    swapPosition()
+    getValue()
+}
+
+class Queensnack{
+    __private static__
+    Queensnack theQueensnack
+    __public static__
+    Queensnack getTheQueensnack()
+    __private__
+    Queensnack()
+    Sorter sorter
+    __public__
+    setSorter()
+    LineUp()
+    parsePlan()
+    execute()
+}
+class Linable{
+    setPosition()
+    getPosition()
+    getValue()
+}
+
+class Line{
+    __ private __
+    #Position[] positions
+    __ public __
+    +Line()
+    +put()
+    +get()
+    __ override __
+    -toString() 
+    -toArray()
+}
+
+class Position{
+    Linable linable
+    Position()
+    setLinable()
+}
+
+class Sorter{
+
+    load()
+    sort()
+    getPlan()
+}
+
+class QuickSorter{
+    __private__
+    int[] a
+    String plan
+    swap()
+    __override__
+    load()
+    sort()
+    getPlan()
+}
+class ShellSorter{
+    __private__
+    int[] a
+    String plan
+    swap()
+    __override__
+    load()
+    sort()
+    getPlan()
+}
+Queensnack "1"-->"1" Queensnack : has
+Queensnack "1"-->"1" Sorter : has
+Monster "1"-->"1" Position :has
+Position "1"-->"1" Linable :has
+Line "1"-->"N" Position :has
+Linable <|.. Monster : Realization
+Sorter <|.. QuickSorter : Realization
+Sorter <|.. ShellSorter : Realization
+@enduml
