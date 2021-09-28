@@ -51,14 +51,16 @@ public class Monster implements Linable{
     public static Monster[] creatmonsters()
     {
         Random rd=new Random();
-        Random rr=new Random();
-        Random rg=new Random();
-        Random rb=new Random();
+        int R=255;
+        int G=0;
+        int B=0;
+
         for(int i=0;i<256;i++)
         {
-            int R = rr.nextInt(256);//生成随机数
-            int G = rg.nextInt(256);//生成随机数
-            int B = rb.nextInt(256);//生成随机数
+            // int R = rr.nextInt(256);//生成随机数
+            // int G = rg.nextInt(256);//生成随机数
+            // int B = rb.nextInt(256);//生成随机数
+            G=i;
             monsters[i]=new Monster(R,G,B);
             monsters[i].myrank=i;
         }

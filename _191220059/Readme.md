@@ -10,10 +10,16 @@
 **参考示例代码，设计自己的类型并完成“蛇精指挥256个小妖怪站成一队“的场景。要求在`Readme.md`中画出相应类图，并添加可视化结果展示链接。**
     解决：类图见uml文件夹中'classdiagram2.pu'。时序图见'timeline2.pu'
     运行过程bilibili录屏：
+    final version:
+    https://www.bilibili.com/video/BV1PU4y1P7Mf?share_source=copy_web
+    init version:
     https://www.bilibili.com/video/BV1RP4y1h7ep?share_source=copy_web
 ##任务三
 **将上一任务中自己写的代码，改为“蛇精指挥256个小妖怪站成一个16x16方阵“的场景。要求在`Readme.md`中画出相应类图，并添加可视化结果展示链接。**
     解决：类图见uml文件夹中'classdiagram2.pu'。时序图见'timeline2.pu'
     运行过程bilibili录屏：
+    final version:
+    https://www.bilibili.com/video/BV1PU4y1P7Mf?share_source=copy_web
+    init:
     https://www.bilibili.com/video/BV1VQ4y1C7jd?share_source=copy_web
 
